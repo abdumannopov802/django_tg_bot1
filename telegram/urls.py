@@ -1,7 +1,8 @@
-from django.urls import path
+from django.contrib import admin
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('getpost/', views.index, name='telegram_bot'),
-    path('setwebhook/', views.setwebhook, name='setwebhook'),
+    path('', views.index, name='views'),
+    path('bot/', views.bot_view, name='bot_view'),
 ]
